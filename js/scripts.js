@@ -1,31 +1,24 @@
-var add = function(num1, num2) {
-  return num1 + num2;
+var add = function(number1, number2) {
+  return number1 + number2;
 };
-var num1 = parseInt(prompt("Enter a number:"));
-var num2 = parseInt(prompt("Enter another number:"));
-var result = add(num1, num2);
-alert(add(num1, num2));
 
-var subtract = function(num1, num2) {
-  return num1 - num2;
+var subtract = function(number1, number2) {
+  return number1 - number2;
 };
-var num1 = parseInt(prompt("Enter a number:"));
-var num2 = parseInt(prompt("Enter another number:"));
-var result = subtract(num1, num2);
-alert(subtract(num1, num2));
 
-var multiply = function(num1,num2) {
-  return num1 * num2;
+var multiply = function(number1, number2) {
+  return number1 * number2;
 };
-var num1 = parseInt(prompt("Enter a number:"));
-var num2 = parseInt(prompt("Enter another number:"));
-var result = multiply(num1,num2);
-alert(multiply(num1,num2));
 
-var divide = function(num1,num2) {
-  return num1 / num2;
+var divide = function(number1, number2) {
+  return number1 / number2;
 };
-var num1 = parseInt(prompt("Enter a number:"));
-var num2 = parseInt(prompt("Enter another number:"));
-var result = divide(num1,num2);
-alert(divide(num1,num2));
+
+$(document).ready(function() {
+  $("form#add").submit(function(event) {
+  event.preventDefault();
+  var number1 = parseInt($("#add1").val());
+  var number2 = parseInt($("#add2").val());
+  alert(add(number1, number2));
+  });
+});
